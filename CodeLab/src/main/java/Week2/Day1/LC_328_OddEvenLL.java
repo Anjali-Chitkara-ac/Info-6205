@@ -1,7 +1,7 @@
-package Week1.Day1;
+package Week2.Day1;
 
 //LC 328
-public class OddEvenLL {
+public class LC_328_OddEvenLL {
     public ListNode oddEvenList(ListNode head){
         if(head==null){
             return null;
@@ -43,7 +43,7 @@ public class OddEvenLL {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        OddEvenLL obj = new OddEvenLL();
+        LC_328_OddEvenLL obj = new LC_328_OddEvenLL();
         ListNode a = obj.oddEvenList(head);
         while (a!=null){
             System.out.print(a.val+"->");

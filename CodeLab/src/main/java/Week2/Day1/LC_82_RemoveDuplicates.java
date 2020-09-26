@@ -1,10 +1,7 @@
-package Week1.Day1;
-
-import java.util.HashMap;
-import java.util.Map;
+package Week2.Day1;
 
 //LC 82
-public class RemoveDuplicates {
+public class LC_82_RemoveDuplicates {
 
     public ListNode deleteDuplicates(ListNode head){
         if(head==null || head.next==null) return  head;
@@ -41,7 +38,8 @@ public class RemoveDuplicates {
         prev.next = temp;
     }
 
-        /* using extra space
+        /*
+        using extra space :
 
         public ListNode deleteDuplicates(ListNode head) {
         if(head==null){
@@ -99,7 +97,7 @@ public class RemoveDuplicates {
 //        head.next.next.next.next.next.next = new ListNode(5);
 
 
-        RemoveDuplicates obj = new RemoveDuplicates();
+        LC_82_RemoveDuplicates obj = new LC_82_RemoveDuplicates();
         ListNode a = obj.deleteDuplicates(head);
         while (a!=null){
             System.out.print(a.val+"->");
