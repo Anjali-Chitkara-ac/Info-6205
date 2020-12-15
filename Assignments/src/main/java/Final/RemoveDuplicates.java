@@ -25,7 +25,7 @@ First delete "eee" and "ccc", get "ddbbbdaa"
 Then delete "bbb", get "dddaa"
 Finally delete "ddd", get "aa"
 */
-    public static String removeDuplicates(String s, int k) {
+    public String removeDuplicates(String s, int k) {
         Stack<Character> stack = new Stack<>();
         Stack<Integer> countStack = new Stack<>();
         for(int i=0;i<s.length();i++){
@@ -50,11 +50,16 @@ Finally delete "ddd", get "aa"
                 }
             }
         }
-        return stack.toString();
+        StringBuilder sb = new StringBuilder();
+        for(char c : stack){
+            sb.append(c);
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-         String result = removeDuplicates("deeedbbcccbdaa",3);
+        RemoveDuplicates obj = new RemoveDuplicates();
+         String result = obj.removeDuplicates("deeedbbcccbdaa",3);
 //         String result = removeDuplicates("abcd",2);
 //         String result = removeDuplicates("",3);
          System.out.println(result);
